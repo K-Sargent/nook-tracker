@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "611864665091",
+    "project_id": "nook-tracker",
+    "storage_bucket": "nook-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611864665091:android:de4d08f82d72726e178236",
+        "android_client_info": {
+          "package_name": "com.example.nooktracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611864665091-uapjbge78cslrkb0pnj35koed2sge3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkqUBgcRBDB26zmKoH8pdnb3J9F-rL1Io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611864665091-uapjbge78cslrkb0pnj35koed2sge3i6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
