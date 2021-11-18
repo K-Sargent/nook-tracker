@@ -1,7 +1,8 @@
-package com.example.nooktracker;
+package com.example.nooktracker.viewmodels;
 
 import android.os.Bundle;
 
+import com.example.nooktracker.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
