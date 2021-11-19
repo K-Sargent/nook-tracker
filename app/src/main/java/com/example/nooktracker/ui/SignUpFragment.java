@@ -40,14 +40,15 @@ public class SignUpFragment extends Fragment {
         NavController controller = NavHostFragment.findNavController(this);
         FirebaseAuth auth = FirebaseAuth.getInstance();
 
+
         binding.SignUpButton.setOnClickListener((view1 -> {
             //validate email
             if (binding.SignUpEmailInput.getText().toString().length() == 0) {
                 binding.SignUpEmailInput.setError("Email cannot be empty");
             } else if (!binding.SignUpEmailInput.getText().toString().contains("@")) {
                 binding.SignUpEmailInput.setError("Must enter a valid email");
-            } else if (!binding.SignUpEmail.getText().toString().equals(binding.SignUpConfirmEmailInput.getText().toString())) {
-                binding.SignUpEmail.setError("Emails do not match");
+            } else if (!binding.SignUpEmailInput.getText().toString().equals(binding.SignUpConfirmEmailInput.getText().toString())) {
+                binding.SignUpEmailInput.setError("Emails do not match");
                 binding.SignUpConfirmEmailInput.setError("Emails do not match");
             } else {
                 emailValid = true;
@@ -56,8 +57,8 @@ public class SignUpFragment extends Fragment {
             //validate password
             if (binding.SignUpPasswordInput.getText().toString().length() < 8) {
                 binding.SignUpPasswordInput.setError("Password must be 8 characters or more");
-            } else if (!binding.SignUpPassword.getText().toString().equals(binding.SignUpConfirmPasswordInput.getText().toString())) {
-                binding.SignUpPassword.setError("Passwords do not match");
+            } else if (!binding.SignUpPasswordInput.getText().toString().equals(binding.SignUpConfirmPasswordInput.getText().toString())) {
+                binding.SignUpPasswordInput.setError("Passwords do not match");
                 binding.SignUpConfirmPasswordInput.setError("Passwords do not match");
             } else {
                 passValid = true;
@@ -65,8 +66,8 @@ public class SignUpFragment extends Fragment {
 
             if (emailValid && passValid) {
                 auth.createUserWithEmailAndPassword(
-                        binding.SignUpEmail.getText().toString(),
-                        binding.SignUpPassword.getText().toString()
+                        binding.SignUpEmailInput.getText().toString(),
+                        binding.SignUpPasswordInput.getText().toString()
                 ).addOnCompleteListener((task)  -> {
                     if (task.isSuccessful()) {
                         controller.navigate(R.id.action_signUpFragment_to_navigation_home);

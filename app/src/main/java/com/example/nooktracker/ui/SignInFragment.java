@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.NavigationUI;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,7 +18,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.nooktracker.R;
+import com.example.nooktracker.databinding.ActivityMainBinding;
 import com.example.nooktracker.databinding.FragmentSignInBinding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -37,6 +40,7 @@ public class SignInFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         binding = FragmentSignInBinding.inflate(inflater, container, false);
         FirebaseAuth auth = FirebaseAuth.getInstance();
         NavController controller = NavHostFragment.findNavController(this);
@@ -58,7 +62,7 @@ public class SignInFragment extends Fragment {
                 emailValid = true;
             }
 
-            if (binding.SignInPassword.getText().toString().length() == 0) {
+            if (binding.SignInPasswordInput.getText().toString().length() == 0) {
                 binding.SignInPasswordInput.setError("Password cannot be empty");
             } else {
                 passValid = true;
