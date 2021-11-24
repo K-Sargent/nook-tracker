@@ -6,22 +6,22 @@
     app:startDestination="@id/signInFragment">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.nooktracker.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_tasks"
+        android:name="com.example.nooktracker.ui.tasks.TasksFragment"
+        android:label="@string/title_tasks"
+        tools:layout="@layout/fragment_tasks" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.nooktracker.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_villagers"
+        android:name="com.example.nooktracker.ui.villagers.VillagersFragment"
+        android:label="@string/title_villagers"
+        tools:layout="@layout/fragment_villagers" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.nooktracker.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_preferences"
+        android:name="com.example.nooktracker.ui.preferences.PreferencesFragment"
+        android:label="@string/title_preferences"
+        tools:layout="@layout/fragment_preferences" />
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.example.nooktracker.ui.SignInFragment"
@@ -31,7 +31,7 @@
             app:destination="@id/signUpFragment" />
         <action
             android:id="@+id/action_signInFragment_to_navigation_home"
-            app:destination="@id/navigation_home" />
+            app:destination="@id/navigation_tasks" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -42,6 +42,6 @@
             app:destination="@id/signInFragment" />
         <action
             android:id="@+id/action_signUpFragment_to_navigation_home"
-            app:destination="@id/navigation_home" />
+            app:destination="@id/navigation_tasks" />
     </fragment>
 </navigation>
