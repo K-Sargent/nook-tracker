@@ -1,4 +1,4 @@
-package com.example.nooktracker.ui.home;
+package com.example.nooktracker.ui.villagers;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,24 +12,23 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.nooktracker.R;
-import com.example.nooktracker.databinding.FragmentHomeBinding;
+import com.example.nooktracker.databinding.FragmentVillagersBinding;
 
-public class HomeFragment extends Fragment {
+public class VillagersFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
-    private FragmentHomeBinding binding;
+    private VillagersViewModel villagersViewModel;
+    private FragmentVillagersBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        villagersViewModel =
+                new ViewModelProvider(this).get(VillagersViewModel.class);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentVillagersBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        final TextView textView = binding.textVillagers;
+        villagersViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
