@@ -30,7 +30,7 @@ public class UserRepository {
         FirebaseUser fbUser = auth.getCurrentUser();
         if (fbUser == null) return null;
 
-        user.uid = fbUser.getUid();
+        user.userId = fbUser.getUid();
         user.email = fbUser.getEmail();
         return user;
     }
@@ -53,6 +53,14 @@ public class UserRepository {
                 // handle the error
             }
         });
+    }
+
+    public void setIslandName(String islandName){
+        getCurrentUser().setIslandName(islandName);
+    }
+
+    public void setCharacterName(String characterName){
+        getCurrentUser().setCharacterName(characterName);
     }
 
     public void logout() {
