@@ -22,10 +22,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUpFragment extends Fragment {
 
-//    public SignUpFragment() {
-//        // Required empty public constructor
-//        super(R.layout.fragment_sign_up);               //kate, this one might need to go too. not sure how it works with the nav component.
-//    }
     boolean emailValid = false;
     boolean passValid = false;
     FragmentSignUpBinding binding;
@@ -39,7 +35,6 @@ public class SignUpFragment extends Fragment {
         binding = FragmentSignUpBinding.inflate(inflater, container, false);
         NavController controller = NavHostFragment.findNavController(this);
         FirebaseAuth auth = FirebaseAuth.getInstance();
-
 
         binding.SignUpButton.setOnClickListener((view1 -> {
             //validate email

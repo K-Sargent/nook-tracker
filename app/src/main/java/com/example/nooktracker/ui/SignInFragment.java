@@ -26,11 +26,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SignInFragment extends Fragment {
 
-//    public SignInFragment() {
-//        // Required empty public constructor
-//        super(R.layout.fragment_sign_in);           //kate, this might need to go away for nav component.
-//    }
-
     boolean emailValid = false;
     boolean passValid = false;
     FragmentSignInBinding binding;
