@@ -1,243 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-<<<<<<< Updated upstream:app/src/main/res/layout/fragment_tasks.xml
-    tools:context=".ui.tasks.TasksFragment">
-
-    <TextView
-        android:id="@+id/text_tasks"
-=======
-    android:contentDescription="Tasks"
-    tools:layour_editor_absoluteX="1dp"
+    android:layout_height="wrap_content"
+    android:contentDescription="tasks"
+    tools:layout_editor_absoluteX="1dp"
     tools:layout_editor_absoluteY="1dp"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
->>>>>>> Stashed changes:app/src/main/res/layout/fragment_home.xml
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".ui.home.HomeFragment">
+        android:background="#00514A"
+        tools:context=".mainActivity">
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="212dp"
-            android:layout_height="41dp"
-            android:text="Tasks"
-            android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="34sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/VillagerTaskFragmentContainerView"
+            android:name="com.example.nooktracker.ui.VillagerTaskFragment"
+            android:layout_width="385dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.02" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="464dp"
-            android:text="Talk To Villagers"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.050"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:layout_constraintVertical_bias="0.0"
-            tools:src="@tools:sample/avatars" />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/RocksTaskFragmentContainerView"
+            android:name="com.example.nooktracker.ui.RocksTaskFragment"
+            android:layout_width="385dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/VillagerTaskFragmentContainerView"
+            app:layout_constraintStart_toStartOf="@+id/VillagerTaskFragmentContainerView"
+            app:layout_constraintTop_toBottomOf="@+id/VillagerTaskFragmentContainerView" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="60dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.008"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:layout_constraintVertical_bias="0.04"
-            tools:src="@tools:sample/avatars" />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/RecipesTaskFragmentContainerView"
+            android:name="com.example.nooktracker.ui.RecipeTaskFragment"
+            android:layout_width="385dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/RocksTaskFragmentContainerView"
+            app:layout_constraintStart_toStartOf="@+id/RocksTaskFragmentContainerView"
+            app:layout_constraintTop_toBottomOf="@+id/RocksTaskFragmentContainerView" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="60dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.048"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:layout_constraintVertical_bias="0.04"
-            tools:src="@tools:sample/avatars" />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/MoneyTreeTaskFragmentContainerView"
+            android:name="com.example.nooktracker.ui.MoneyTreeTaskFragment"
+            android:layout_width="385dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@id/RecipesTaskFragmentContainerView"
+            app:layout_constraintStart_toStartOf="@id/RecipesTaskFragmentContainerView"
+            app:layout_constraintTop_toBottomOf="@id/RecipesTaskFragmentContainerView" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.936"
-            app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:layout_constraintVertical_bias="0.04"
-            tools:src="@tools:sample/avatars" />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/FlowersTaskFragmentContainerView"
+            android:name="com.example.nooktracker.ui.FlowersTaskFragment"
+            android:layout_width="385dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@id/MoneyTreeTaskFragmentContainerView"
+            app:layout_constraintStart_toStartOf="@id/MoneyTreeTaskFragmentContainerView"
+            app:layout_constraintTop_toBottomOf="@id/MoneyTreeTaskFragmentContainerView" />
 
-        <CheckBox
-            android:id="@+id/checkBox8"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.048"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.032" />
-
-        <CheckBox
-            android:id="@+id/checkBox9"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="64dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.016"
-            app:layout_constraintStart_toEndOf="@+id/checkBox8"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.034" />
-
-        <CheckBox
-            android:id="@+id/checkBox10"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="60dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.039"
-            app:layout_constraintStart_toEndOf="@+id/checkBox9"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3"
-            app:layout_constraintVertical_bias="0.034" />
-
-        <CheckBox
-            android:id="@+id/checkBox11"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="64dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/checkBox10"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4"
-            app:layout_constraintVertical_bias="0.034" />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.049"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox8"
-            app:layout_constraintVertical_bias="0.041"
-            tools:src="@tools:sample/avatars" />
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.221"
-            app:layout_constraintStart_toEndOf="@+id/imageView9"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox9"
-            app:layout_constraintVertical_bias="0.041"
-            tools:src="@tools:sample/avatars" />
-
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.346"
-            app:layout_constraintStart_toEndOf="@+id/imageView10"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox10"
-            app:layout_constraintVertical_bias="0.04"
-            tools:src="@tools:sample/avatars" />
-
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.767"
-            app:layout_constraintStart_toEndOf="@+id/imageView11"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox11"
-            app:layout_constraintVertical_bias="0.041"
-            tools:src="@tools:sample/avatars" />
-
-        <CheckBox
-            android:id="@+id/checkBox12"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.049"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView9"
-            app:layout_constraintVertical_bias="0.044" />
-
-        <CheckBox
-            android:id="@+id/checkBox13"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.218"
-            app:layout_constraintStart_toEndOf="@+id/checkBox12"
-            app:layout_constraintTop_toBottomOf="@+id/imageView10"
-            app:layout_constraintVertical_bias="0.046" />
-
-        <CheckBox
-            android:id="@+id/checkBox14"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.349"
-            app:layout_constraintStart_toEndOf="@+id/checkBox13"
-            app:layout_constraintTop_toBottomOf="@+id/imageView11"
-            app:layout_constraintVertical_bias="0.046" />
-
-        <CheckBox
-            android:id="@+id/checkBox15"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.767"
-            app:layout_constraintStart_toEndOf="@+id/checkBox14"
-            app:layout_constraintTop_toBottomOf="@+id/imageView12"
-            app:layout_constraintVertical_bias="0.046" />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="com.example.nooktracker.ui.ShoppingTaskFragment"
+            android:layout_width="385dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="@id/FlowersTaskFragmentContainerView"
+            app:layout_constraintStart_toStartOf="@id/FlowersTaskFragmentContainerView"
+            app:layout_constraintTop_toBottomOf="@id/FlowersTaskFragmentContainerView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>
