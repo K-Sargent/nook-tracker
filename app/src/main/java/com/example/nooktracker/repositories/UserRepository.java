@@ -83,6 +83,6 @@ public class UserRepository {
     public void logout() {
 
         auth.signOut();
-        user.postValue(null);
+//        user.postValue(null);
     }
 }

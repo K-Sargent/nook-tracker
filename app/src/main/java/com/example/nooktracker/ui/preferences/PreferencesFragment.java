@@ -35,9 +35,11 @@ public class PreferencesFragment extends Fragment {
         currentUser.observe(getViewLifecycleOwner(), authUser -> {
             repository.loadCurrentUser();
             if (authUser == null) {
-                preferencesViewModel.user = null;
-                binding.pUserDisplay.setText("");
-                binding.pSaveButton.setEnabled(false);
+                repository.logout();
+                controller.navigate(R.id.action_navigation_preferences_to_signInFragment);
+//                preferencesViewModel.user = null;
+//                binding.pUserDisplay.setText("");
+//                binding.pSaveButton.setEnabled(false);
             } else {
                 preferencesViewModel.loadUser(authUser.getUserId());
                 binding.pUserDisplay.setText(authUser.getEmail());
