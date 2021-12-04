@@ -105,7 +105,8 @@ public class RecipeTaskFragment extends Fragment {
         binding = FragmentRecipeTaskBinding.inflate(inflater, container, false);
         NavController controller = NavHostFragment.findNavController(this);
         UserRepository repository = new UserRepository();
-        User currentUser = repository.getCurrentUser();
+        repository.loadUserFromAuth();
+        User currentUser = repository.getTaskUser();
         tasksViewModel.loadTasks(currentUser.userId);
 
         tasksToBeUpdated = tasksViewModel.getAllTasks();

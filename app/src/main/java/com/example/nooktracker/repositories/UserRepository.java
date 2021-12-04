@@ -1,8 +1,5 @@
 package com.example.nooktracker.repositories;
 
-
-import com.example.nooktracker.models.Tasks;
-
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.nooktracker.models.User;
@@ -11,6 +8,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class UserRepository {
     FirebaseAuth auth;
     MutableLiveData<User> user = new MutableLiveData<>();
+    User taskUser = new User();
 
     public static interface OnFailureListener {
         public void onFailure(Exception e);
@@ -43,6 +41,15 @@ public class UserRepository {
             userFromAuth.setEmail(auth.getCurrentUser().getEmail());
             user.postValue(userFromAuth);
         }
+    }
+
+    public User getTaskUser() {
+        return taskUser;
+    }
+
+    public void loadUserFromAuth(){
+        taskUser.setEmail(auth.getCurrentUser().getEmail());
+        taskUser.setUserId(auth.getUid());
     }
 
     public void signIn(String email, String password, OnFailureListener onFailureListener ) {
@@ -84,25 +91,6 @@ public class UserRepository {
     }
 
     public void logout() {
-
         auth.signOut();
-//        user.postValue(null);
     }
-
-    //----------------------------------------------------------------------------------------------
-
-    public Tasks getCurrentTasks() {
-        Tasks tasks = new Tasks();
-        FirebaseUser fbUser = auth.getCurrentUser();
-        if (fbUser == null) return null;
-
-        tasks.userId = fbUser.getUid();
-
-        return tasks;
-    }
-
-    public void setCheckboxes(Boolean[] checkboxes){
-        getCurrentTasks().setAll(checkboxes);
-    }
-
 }
