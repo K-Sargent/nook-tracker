@@ -1,24 +1,16 @@
 package com.example.nooktracker.ui.preferences;
 
-import android.util.Log;
-
-import androidx.databinding.ObservableArrayList;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.nooktracker.models.User;
-import com.example.nooktracker.repositories.UserRepository;
-import com.google.android.gms.tasks.Tasks;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
 
 public class PreferencesViewModel extends ViewModel {
-    UserRepository repository;
-    ObservableArrayList<User> users;
     MutableLiveData<User> user = new MutableLiveData<>();
     MutableLiveData<Boolean> saving = new MutableLiveData<>();
     MutableLiveData<String> errorMessage = new MutableLiveData<>();

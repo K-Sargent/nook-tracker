@@ -11,14 +11,11 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.NavigationUI;
 
 import com.example.nooktracker.R;
 import com.example.nooktracker.databinding.FragmentPreferencesBinding;
 import com.example.nooktracker.models.User;
 import com.example.nooktracker.repositories.UserRepository;
-
-import java.util.Observable;
 
 public class PreferencesFragment extends Fragment {
 
