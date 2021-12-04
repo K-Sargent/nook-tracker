@@ -26,26 +26,45 @@ public class PreferencesFragment extends Fragment {
     private FragmentPreferencesBinding binding;
     private boolean isSaving = false;
     private boolean userExistsInDb = false;
-    private User userToBeUpdated;
+
+//    private OnInfoGrabbedListener onInfoGrabbedListener;
+//    public interface OnInfoGrabbedListener {
+//        public void onInfoGrabbed();
+//    }
+//    // ALLOWS YOU TO SET LISTENER && INVOKE THE OVERRIDING METHOD
+//    // FROM WITHIN ACTIVITY
+//    public void setOnInfoGrabbedListener(OnInfoGrabbedListener listener) {
+//        onInfoGrabbedListener = listener;
+//    }
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         preferencesViewModel = new ViewModelProvider(this).get(PreferencesViewModel.class);
         binding = FragmentPreferencesBinding.inflate(inflater, container, false);
         NavController controller = NavHostFragment.findNavController(this);
         UserRepository repository = new UserRepository();
-        User currentUser = repository.getCurrentUser();
-//        if (preferencesViewModel.user == null) {
-//            preferencesViewModel.setSelectedUser(currentUser);
-//        }
-//        preferencesViewModel.loadUser(currentUser.getUserId());
-//        MutableLiveData<User> userFromDb = preferencesViewModel.getUser();
+        repository.loadCurrentUser();
+        MutableLiveData<User> currentUser = repository.getCurrentUser();
 
-        binding.pUserDisplay.setText(currentUser.getEmail());
-//        binding.editIslandName.setText(userFromDb.getValue().getIslandName());
-//        binding.editCharacterName.setText(userFromDb.getValue().getCharacterName());
-
+        currentUser.observe(getViewLifecycleOwner(), authUser -> {
+            repository.loadCurrentUser();
+            if (authUser == null) {
+                preferencesViewModel.user = null;
+                binding.pUserDisplay.setText("");
+                binding.pSaveButton.setEnabled(false);
+            } else {
+                preferencesViewModel.loadUser(authUser.getUserId());
+                binding.pUserDisplay.setText(authUser.getEmail());
+                binding.pSaveButton.setEnabled(true);
+            }
+        });
+        MutableLiveData<User> userFromDb = preferencesViewModel.getUser();
+        userFromDb.observe(getViewLifecycleOwner(), (user -> {
+            binding.dbSavedIsland.setText(user.getIslandName());
+            binding.dbSavedCharacter.setText(user.getCharacterName());
+        }));
 
         binding.logOutButton.setOnClickListener((view -> {
+
             repository.logout();
             controller.navigate(R.id.action_navigation_preferences_to_signInFragment);
         }));
@@ -65,14 +84,14 @@ public class PreferencesFragment extends Fragment {
         if (!userExistsInDb) {
             binding.pSaveButton.setOnClickListener(view -> {
                 binding.pSaveButton.setEnabled(false);
-                preferencesViewModel.createUser(currentUser.email, currentUser.getUserId(), binding.editIslandName.getText().toString(), binding.editCharacterName.getText().toString());
+                preferencesViewModel.createUser(currentUser.getValue().getEmail(), currentUser.getValue().getUserId(), binding.editIslandName.getText().toString(), binding.editCharacterName.getText().toString());
                 binding.pSaveButton.setEnabled(true);
             });
         } else {
             binding.pSaveButton.setOnClickListener(view -> {
                 binding.pSaveButton.setEnabled(false);
                 preferencesViewModel.setUser(
-                        currentUser,
+                        currentUser.getValue(),
                         binding.editIslandName.getText().toString(),
                         binding.editCharacterName.getText().toString()
                 );
