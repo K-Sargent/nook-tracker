@@ -27,16 +27,6 @@ public class PreferencesFragment extends Fragment {
     private boolean isSaving = false;
     private boolean userExistsInDb = false;
 
-//    private OnInfoGrabbedListener onInfoGrabbedListener;
-//    public interface OnInfoGrabbedListener {
-//        public void onInfoGrabbed();
-//    }
-//    // ALLOWS YOU TO SET LISTENER && INVOKE THE OVERRIDING METHOD
-//    // FROM WITHIN ACTIVITY
-//    public void setOnInfoGrabbedListener(OnInfoGrabbedListener listener) {
-//        onInfoGrabbedListener = listener;
-//    }
-
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         preferencesViewModel = new ViewModelProvider(this).get(PreferencesViewModel.class);
         binding = FragmentPreferencesBinding.inflate(inflater, container, false);
