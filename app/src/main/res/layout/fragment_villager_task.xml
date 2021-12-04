@@ -116,11 +116,7 @@
         app:layout_constraintVertical_bias="0.029" />
 
     <ImageView
-<<<<<<< Updated upstream
-        android:id="@+id/imageView8"
-=======
         android:id="@+id/villagerImage4"
->>>>>>> Stashed changes
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/raymond"
@@ -128,14 +124,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.952"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< Updated upstream
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.075"
-        tools:src="@drawable/raymond" />
-=======
+        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerTextView"
         app:layout_constraintVertical_bias="0.017" />
->>>>>>> Stashed changes
 
     <ImageView
         android:id="@+id/villagerImage3"
@@ -146,14 +137,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< Updated upstream
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.075"
-        tools:src="@drawable/raymond" />
-=======
+        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerTextView"
         app:layout_constraintVertical_bias="0.017" />
->>>>>>> Stashed changes
 
     <ImageView
         android:id="@+id/villagerImage6"
@@ -164,14 +150,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.349"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< Updated upstream
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275"
-        tools:src="@drawable/raymond" />
-=======
+        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerCheckbox2"
         app:layout_constraintVertical_bias="0.036" />
->>>>>>> Stashed changes
 
     <ImageView
         android:id="@+id/villagerImage2"
@@ -182,14 +163,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.349"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< Updated upstream
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.075"
-        tools:src="@drawable/raymond" />
-=======
+        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerTextView"
         app:layout_constraintVertical_bias="0.017" />
->>>>>>> Stashed changes
 
     <ImageView
         android:id="@+id/villagerImage7"
@@ -200,14 +176,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< Updated upstream
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275"
-        tools:src="@drawable/raymond" />
-=======
+        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerCheckbox3"
         app:layout_constraintVertical_bias="0.036" />
->>>>>>> Stashed changes
 
     <ImageView
         android:id="@+id/villagerImage5"
@@ -218,14 +189,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< Updated upstream
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275"
-        tools:src="@drawable/raymond" />
-=======
+        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerCheckbox1"
         app:layout_constraintVertical_bias="0.037" />
->>>>>>> Stashed changes
 
     <ImageView
         android:id="@+id/villagerImage8"
@@ -236,14 +202,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< Updated upstream
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275"
-        tools:src="@drawable/raymond" />
-=======
+        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerCheckbox4"
         app:layout_constraintVertical_bias="0.036" />
->>>>>>> Stashed changes
 
     <ImageView
         android:id="@+id/villagerImage1"
@@ -254,13 +215,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< Updated upstream
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.075"
-        tools:src="@drawable/raymond" />
-=======
+        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerTextView"
         app:layout_constraintVertical_bias="0.017" />
->>>>>>> Stashed changes
-
 </androidx.constraintlayout.widget.ConstraintLayout>

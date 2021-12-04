@@ -37,9 +37,6 @@ public class PreferencesFragment extends Fragment {
             if (authUser == null) {
                 repository.logout();
                 controller.navigate(R.id.action_navigation_preferences_to_signInFragment);
-//                preferencesViewModel.user = null;
-//                binding.pUserDisplay.setText("");
-//                binding.pSaveButton.setEnabled(false);
             } else {
                 preferencesViewModel.loadUser(authUser.getUserId());
                 binding.pUserDisplay.setText(authUser.getEmail());

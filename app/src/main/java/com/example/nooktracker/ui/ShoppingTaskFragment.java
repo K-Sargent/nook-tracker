@@ -106,7 +106,8 @@ public class ShoppingTaskFragment extends Fragment {
         binding = FragmentShoppingTaskBinding.inflate(inflater, container, false);
         NavController controller = NavHostFragment.findNavController(this);
         UserRepository repository = new UserRepository();
-        User currentUser = repository.getCurrentUser();
+        repository.loadUserFromAuth();
+        User currentUser = repository.getTaskUser();
         tasksViewModel.loadTasks(currentUser.userId);
 
         tasksToBeUpdated = tasksViewModel.getAllTasks();
