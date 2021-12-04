@@ -6,21 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.villagers.VillagersFragment">
 
-    <TextView
-        android:id="@+id/text_villagers"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="75dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< Updated upstream
-        app:layout_constraintTop_toTopOf="parent" />
-=======
         app:layout_constraintTop_toBottomOf="@+id/searchView">
 
         <LinearLayout
@@ -34,7 +26,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/villagerImage4"
+                    android:id="@+id/villagerImage"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -51,7 +43,7 @@
                     android:layout_marginStart="24dp"
                     android:text="Raymond"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/villagerImage4"
+                    app:layout_constraintStart_toEndOf="@+id/villagerImage"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -74,5 +66,4 @@
 
     </SearchView>
 
->>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>
