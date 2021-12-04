@@ -25,49 +25,50 @@
         app:layout_constraintVertical_bias="0.022" />
 
     <ImageView
-        android:id="@+id/imageView16"
+        android:id="@+id/shoppingImageView1"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:src="@drawable/raymond"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.346"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.086"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.029"/>
+<!--        tools:src="@tools:sample/avatars" -->
 
     <ImageView
-        android:id="@+id/imageView18"
+        android:id="@+id/shoppingImageView2"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:src="@drawable/raymond"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.664"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.086"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.028"/>
 
     <CheckBox
-        android:id="@+id/checkBox16"
+        android:id="@+id/shoppingCheckBox1"
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.346"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.179" />
+        app:layout_constraintTop_toBottomOf="@+id/shoppingImageView1"
+        app:layout_constraintVertical_bias="0.029" />
 
     <CheckBox
-        android:id="@+id/checkBox17"
+        android:id="@+id/shoppingCheckbox2"
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.664"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.179" />
+        app:layout_constraintTop_toBottomOf="@+id/shoppingImageView2"
+        app:layout_constraintVertical_bias="0.031" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

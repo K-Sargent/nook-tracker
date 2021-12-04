@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< Updated upstream
         <entry key="..\:/Users/annem/Desktop/nook-tracker/app/src/main/res/layout/fragment_flowers_task.xml" value="0.3234375" />
         <entry key="..\:/Users/annem/Desktop/nook-tracker/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/annem/Desktop/nook-tracker/app/src/main/res/layout/fragment_money_tree_task.xml" value="0.1" />
@@ -11,6 +12,16 @@
         <entry key="..\:/Users/annem/Desktop/nook-tracker/app/src/main/res/layout/fragment_shopping_task.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/annem/Desktop/nook-tracker/app/src/main/res/layout/fragment_tasks.xml" value="0.22" />
         <entry key="..\:/Users/annem/Desktop/nook-tracker/app/src/main/res/layout/fragment_villager_task.xml" value="0.25" />
+=======
+        <entry key="..\:/Users/annem/Desktop/nook-tracker/app/src/main/res/layout/fragment_flowers_task.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/annem/Desktop/nook-tracker/app/src/main/res/layout/fragment_money_tree_task.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/annem/Desktop/nook-tracker/app/src/main/res/layout/fragment_recipe_task.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/annem/Desktop/nook-tracker/app/src/main/res/layout/fragment_rocks_task.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/annem/Desktop/nook-tracker/app/src/main/res/layout/fragment_shopping_task.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/annem/Desktop/nook-tracker/app/src/main/res/layout/fragment_tasks.xml" value="0.1947463768115942" />
+        <entry key="..\:/Users/annem/Desktop/nook-tracker/app/src/main/res/layout/fragment_villager_task.xml" value="0.25" />
+        <entry key="..\:/Users/annem/Desktop/nook-tracker/app/src/main/res/layout/fragment_villagers.xml" value="0.1" />
+>>>>>>> Stashed changes
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23020833333333332" />
       </map>
     </option>
