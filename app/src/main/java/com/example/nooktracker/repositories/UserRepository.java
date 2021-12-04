@@ -1,5 +1,8 @@
 package com.example.nooktracker.repositories;
 
+
+import com.example.nooktracker.models.Tasks;
+
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.nooktracker.models.User;
@@ -85,4 +88,21 @@ public class UserRepository {
         auth.signOut();
 //        user.postValue(null);
     }
+
+    //----------------------------------------------------------------------------------------------
+
+    public Tasks getCurrentTasks() {
+        Tasks tasks = new Tasks();
+        FirebaseUser fbUser = auth.getCurrentUser();
+        if (fbUser == null) return null;
+
+        tasks.userId = fbUser.getUid();
+
+        return tasks;
+    }
+
+    public void setCheckboxes(Boolean[] checkboxes){
+        getCurrentTasks().setAll(checkboxes);
+    }
+
 }
