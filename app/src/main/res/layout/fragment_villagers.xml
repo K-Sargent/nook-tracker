@@ -26,7 +26,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/villagerImage"
+                    android:id="@+id/villagerImage4"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -43,7 +43,7 @@
                     android:layout_marginStart="24dp"
                     android:text="Raymond"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/villagerImage"
+                    app:layout_constraintStart_toEndOf="@+id/villagerImage4"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
