@@ -5,8 +5,13 @@ import android.view.View;
 
 import com.example.nooktracker.R;
 import com.example.nooktracker.repositories.UserRepository;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -25,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        MobileAds.initialize(this);
         UserRepository userRepository = new UserRepository();
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
@@ -37,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
-
         userRepository.loadCurrentUser();
         userRepository.getCurrentUser().observe(this, userFromAuth -> {
             userRepository.loadCurrentUser();
@@ -47,6 +52,6 @@ public class MainActivity extends AppCompatActivity {
                 binding.navView.setVisibility(View.VISIBLE);
             }
         });
-    }
 
+    }
 }
