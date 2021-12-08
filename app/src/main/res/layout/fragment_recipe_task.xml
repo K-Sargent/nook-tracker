@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/acbackgroundshort"
+    android:background="#E6FFFFFF"
     tools:context=".ui.RecipeTaskFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -28,7 +28,7 @@
         android:id="@+id/recipeImageView1"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/raymond"
+        android:src="@drawable/recipe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.346"
@@ -40,7 +40,7 @@
         android:id="@+id/recipeImageView2"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/raymond"
+        android:src="@drawable/recipe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.664"

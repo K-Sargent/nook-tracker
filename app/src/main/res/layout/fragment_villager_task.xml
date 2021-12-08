@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/acbackgroundshort"
+    android:background="#E6FFFFFF"
     tools:context=".ui.VillagerTaskFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -112,11 +112,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/villagerImage4"
+        app:layout_constraintTop_toBottomOf="@+id/ownedVillager1"
         app:layout_constraintVertical_bias="0.029" />
 
     <ImageView
-        android:id="@+id/villagerImage4"
+        android:id="@+id/ownedVillager1"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/raymond"
@@ -124,9 +124,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.952"
         app:layout_constraintStart_toStartOf="parent"
-        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerTextView"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintVertical_bias="0.017"
+        tools:src="@drawable/raymond" />
 
     <ImageView
         android:id="@+id/villagerImage3"
@@ -137,9 +137,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
-        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerTextView"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintVertical_bias="0.017"
+        tools:src="@drawable/raymond" />
 
     <ImageView
         android:id="@+id/villagerImage6"
@@ -150,9 +150,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.349"
         app:layout_constraintStart_toStartOf="parent"
-        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerCheckbox2"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.036"
+        tools:src="@drawable/raymond" />
 
     <ImageView
         android:id="@+id/villagerImage2"
@@ -163,9 +163,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.349"
         app:layout_constraintStart_toStartOf="parent"
-        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerTextView"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintVertical_bias="0.017"
+        tools:src="@drawable/raymond" />
 
     <ImageView
         android:id="@+id/villagerImage7"
@@ -176,9 +176,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
-        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerCheckbox3"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.036"
+        tools:src="@drawable/raymond" />
 
     <ImageView
         android:id="@+id/villagerImage5"
@@ -189,9 +189,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
-        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerCheckbox1"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.037"
+        tools:src="@drawable/raymond" />
 
     <ImageView
         android:id="@+id/villagerImage8"
@@ -202,9 +202,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
-        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerCheckbox4"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.036"
+        tools:src="@drawable/raymond" />
 
     <ImageView
         android:id="@+id/villagerImage1"
@@ -215,7 +215,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
-        tools:src="@drawable/raymond"
         app:layout_constraintTop_toBottomOf="@+id/villagerTextView"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintVertical_bias="0.017"
+        tools:src="@drawable/raymond" />
 </androidx.constraintlayout.widget.ConstraintLayout>
