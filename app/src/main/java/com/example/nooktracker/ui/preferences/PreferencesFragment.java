@@ -16,7 +16,6 @@ import com.example.nooktracker.R;
 import com.example.nooktracker.databinding.FragmentPreferencesBinding;
 import com.example.nooktracker.models.User;
 import com.example.nooktracker.repositories.UserRepository;
-//import com.google.android.gms.ads.AdRequest;
 
 public class PreferencesFragment extends Fragment {
 
