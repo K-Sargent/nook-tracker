@@ -1,6 +1,6 @@
 package com.example.nooktracker.models;
 
-public class giTasks {
+public class Tasks {
     public String userId;
 
     public Boolean villagerCheckbox1;
