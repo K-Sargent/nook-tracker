@@ -11,10 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NookTracker">
 
-        <meta-data
-            android:name="com.google.android.gm.ads.APPLICATION_ID"
-            android:value="ca-app-pub-7998950271795058~6836860801"
-        />
         <activity
             android:name=".viewmodels.MainActivity"
             android:exported="true"

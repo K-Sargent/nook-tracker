@@ -16,7 +16,7 @@ import com.example.nooktracker.R;
 import com.example.nooktracker.databinding.FragmentPreferencesBinding;
 import com.example.nooktracker.models.User;
 import com.example.nooktracker.repositories.UserRepository;
-import com.google.android.gms.ads.AdRequest;
+//import com.google.android.gms.ads.AdRequest;
 
 public class PreferencesFragment extends Fragment {
 
@@ -32,10 +32,6 @@ public class PreferencesFragment extends Fragment {
         UserRepository repository = new UserRepository();
         repository.loadCurrentUser();
         MutableLiveData<User> currentUser = repository.getCurrentUser();
-
-        binding.bannerAd.loadAd(
-                new AdRequest.Builder().build()
-        );
 
         currentUser.observe(getViewLifecycleOwner(), authUser -> {
             repository.loadCurrentUser();
