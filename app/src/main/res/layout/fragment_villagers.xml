@@ -4,16 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:outlineAmbientShadowColor="#009688"
+    android:outlineProvider="paddedBounds"
+    android:outlineSpotShadowColor="#009688"
     tools:context=".ui.villagers.VillagersFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/owned"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="230dp"
+        android:background="@color/teal_200"
+        android:outlineAmbientShadowColor="@color/teal_700"
+        android:outlineProvider="paddedBounds"
         android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Owned Villagers"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/ownedVillagerImageView8"
@@ -24,8 +40,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerButton4"
-            app:layout_constraintVertical_bias="0.113" />
+            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerImageView3" />
 
         <ImageView
             android:id="@+id/ownedVillagerImageView7"
@@ -36,8 +51,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.681"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerButton3"
-            app:layout_constraintVertical_bias="0.126" />
+            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerImageView4" />
 
         <ImageView
             android:id="@+id/ownedVillagerImageView6"
@@ -48,8 +62,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.335"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerButton2"
-            app:layout_constraintVertical_bias="0.103" />
+            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerImageView2" />
 
         <ImageView
             android:id="@+id/ownedVillagerImageView5"
@@ -60,13 +73,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerButton1"
-            app:layout_constraintVertical_bias="0.092" />
+            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerImageView1" />
 
         <ImageView
             android:id="@+id/ownedVillagerImageView4"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginTop="32dp"
             android:src="@drawable/raymond"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -79,6 +92,7 @@
             android:id="@+id/ownedVillagerImageView3"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginTop="32dp"
             android:src="@drawable/raymond"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -91,6 +105,7 @@
             android:id="@+id/ownedVillagerImageView2"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginTop="32dp"
             android:src="@drawable/raymond"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -103,6 +118,7 @@
             android:id="@+id/ownedVillagerImageView1"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginTop="32dp"
             android:src="@drawable/raymond"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -111,103 +127,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
-        <Button
-            android:id="@+id/ownedVillagerButton1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="100dp"
-            android:text="X"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerImageView1"
-            app:layout_constraintVertical_bias="0.457" />
-
-        <Button
-            android:id="@+id/ownedVillagerButton2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="112dp"
-            android:text="X"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.335"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerImageView2"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <Button
-            android:id="@+id/ownedVillagerButton3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="108dp"
-            android:text="X"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.681"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerImageView4" />
-
-        <Button
-            android:id="@+id/ownedVillagerButton4"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="108dp"
-            android:text="X"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerImageView3" />
-
-        <Button
-            android:id="@+id/ownedVillagerButton5"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:text="X"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerImageView5"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <Button
-            android:id="@+id/ownedVillagerButton6"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:text="X"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.335"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerImageView5"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <Button
-            android:id="@+id/ownedVillagerButton7"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:text="X"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.681"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerImageView5"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <Button
-            android:id="@+id/ownedVillagerButton8"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:text="X"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ownedVillagerImageView5"
-            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
