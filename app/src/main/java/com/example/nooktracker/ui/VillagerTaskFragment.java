@@ -87,31 +87,40 @@ import com.example.nooktracker.databinding.FragmentTasksBinding;
 import com.example.nooktracker.databinding.FragmentVillagerTaskBinding;
 import com.example.nooktracker.models.Tasks;
 import com.example.nooktracker.models.User;
+import com.example.nooktracker.models.Villagers;
 import com.example.nooktracker.repositories.UserRepository;
 import com.example.nooktracker.ui.tasks.TasksViewModel;
+import com.example.nooktracker.ui.villagers.VillagersViewModel;
 
 import java.util.Observable;
+
+import com.squareup.picasso.Picasso;
 
 public class VillagerTaskFragment extends Fragment {
 
     private TasksViewModel tasksViewModel;
+    private VillagersViewModel villagersViewModel; //
     private FragmentVillagerTaskBinding binding;
     private boolean isSaving = false;
+    private boolean isSaving2 = false;
     private boolean tasksExistsInDb = false;
     private MutableLiveData<Tasks> tasksToBeUpdated;
+    private MutableLiveData<Villagers> villagersToBeUpdated; //
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         tasksViewModel = new ViewModelProvider(requireActivity()).get(TasksViewModel.class);
+        villagersViewModel = new ViewModelProvider(requireActivity()).get(VillagersViewModel.class); //
         binding = FragmentVillagerTaskBinding.inflate(inflater, container, false);
         NavController controller = NavHostFragment.findNavController(this);
         UserRepository repository = new UserRepository();
         repository.loadUserFromAuth();
         User currentUser = repository.getTaskUser();
         tasksViewModel.loadTasks(currentUser.userId);
+        villagersViewModel.loadVillagers(currentUser.userId); //
 
         tasksToBeUpdated = tasksViewModel.getAllTasks();
         tasksToBeUpdated.observe(getViewLifecycleOwner(), tasks -> {
-            if(tasks != null){
+            if (tasks != null) {
                 binding.villagerCheckbox1.setChecked(tasks.villagerCheckbox1);
                 binding.villagerCheckbox2.setChecked(tasks.villagerCheckbox2);
                 binding.villagerCheckbox3.setChecked(tasks.villagerCheckbox3);
@@ -128,6 +137,26 @@ public class VillagerTaskFragment extends Fragment {
                 isSaving = true;
             }
         });
+
+        villagersToBeUpdated = villagersViewModel.getAllVillagers();                              //
+        villagersToBeUpdated.observe(getViewLifecycleOwner(), villagers -> {                      //
+            if (villagers != null){                                                               //
+                Picasso.get().load(villagers.villager1.getImageUrl()).into(binding.villagerImage1);//
+                Picasso.get().load(villagers.villager2.getImageUrl()).into(binding.villagerImage2);//
+                Picasso.get().load(villagers.villager3.getImageUrl()).into(binding.villagerImage3);//
+                Picasso.get().load(villagers.villager4.getImageUrl()).into(binding.villagerImage4);//
+                Picasso.get().load(villagers.villager5.getImageUrl()).into(binding.villagerImage5);//
+                Picasso.get().load(villagers.villager6.getImageUrl()).into(binding.villagerImage6);//
+                Picasso.get().load(villagers.villager7.getImageUrl()).into(binding.villagerImage7);//
+                Picasso.get().load(villagers.villager8.getImageUrl()).into(binding.villagerImage8);//
+            }                                                                                     //
+        });                                                                                       //
+
+        villagersViewModel.getSaving().observe(getViewLifecycleOwner(), saving -> {               //
+            if (!isSaving2 && saving) {                                                            //
+              isSaving2 = true;                                                                    //
+            }                                                                                     //
+        });                                                                                         //
 
         return binding.getRoot();
     }

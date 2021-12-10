@@ -30,7 +30,7 @@ public class VillagersViewModel extends ViewModel {
 
     public MutableLiveData<Boolean> getSaving() { return saving; }
 
-    public MutableLiveData<Villagers> getAllTasks() {
+    public MutableLiveData<Villagers> getAllVillagers() {
         return villagers;
     }
 
@@ -98,7 +98,7 @@ public class VillagersViewModel extends ViewModel {
 
 
         db
-                .collection("userTasks")
+                .collection("userVillagers")
                 .document(villagers.getUserId())
                 .set(villagers)
                 .addOnCompleteListener(task -> {
