@@ -4,7 +4,10 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Switch;
+import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.ObservableArrayList;
@@ -34,8 +37,18 @@ public class VillagersAdapter extends RecyclerView.Adapter<VillagersAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Button addVillager = holder.getBinding().addVillager;
+
         holder.getBinding().villagerName.setText(villagers.get(position).getName());
         Picasso.get().load(villagers.get(position).getImageUrl()).into(holder.getBinding().villagerImage);
+//        addVillager.setOnClickListener(view -> {
+//            if () {
+//
+//            }
+//            else {
+//
+//            }
+//        });
     }
 
     @Override
